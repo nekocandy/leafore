@@ -42,6 +42,7 @@ export default defineNuxtConfig({
     auth: {
       DISCORD_CLIENT_ID: process.env.DISCORD_CLIENT_ID,
       DISCORD_CLIENT_SECRET: process.env.DISCORD_CLIENT_SECRET,
+      SECRET: process.env.AUTH_SECRET,
     },
   },
 })
