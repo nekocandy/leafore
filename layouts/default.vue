@@ -7,7 +7,7 @@
     <div>
       <Navbar />
     </div>
-    <div flex-1>
+    <div mx-auto max-w-5xl w-full flex-1>
       <slot />
     </div>
   </div>
