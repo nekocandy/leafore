@@ -41,6 +41,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  Forum         Forum[]
 }
 
 model VerificationToken {
@@ -73,10 +74,11 @@ model DeedRewards {
 
 model Forum {
   id        String   @id @unique
+  userId    String
   title     String
-  username  String
-  avatar    String
   content   String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
 }
