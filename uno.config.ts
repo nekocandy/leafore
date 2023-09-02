@@ -35,6 +35,10 @@ export default defineConfig({
         imprima: {
           name: 'Imprima',
         },
+        k2d: {
+          name: 'K2D',
+          weights: Array.from({ length: 9 }).fill(0).map((_, i) => i * 100 + 100),
+        },
       },
     }),
   ],
