@@ -2,7 +2,8 @@
 definePageMeta({
   auth: false,
 })
-const { status, data, signIn, signOut } = useAuth()
+
+const { status, signIn, signOut } = useAuth()
 
 async function auth() {
   if (status.value === 'authenticated')
