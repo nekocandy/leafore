@@ -11,6 +11,7 @@
         "notivue",
         "nuxt",
         "sidebase",
+        "trpc",
         "unocss",
         "vueuse"
     ],

@@ -41,7 +41,11 @@ export default defineNuxtConfig({
       },
     ],
   },
-
+  build: {
+    transpile: [
+      'trpc-nuxt',
+    ],
+  },
   runtimeConfig: {
     auth: {
       DISCORD_CLIENT_ID: process.env.DISCORD_CLIENT_ID,
