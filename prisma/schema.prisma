@@ -54,22 +54,26 @@ model VerificationToken {
 }
 
 model Deeds {
-  id             String           @id @unique
-  name           String
-  points         Int
-  createdAt      DateTime         @default(now())
-  updatedAt      DateTime         @updatedAt
-  approved       Boolean          @default(true)
+  id        String   @id @unique
+  name      String
+  points    Int
+  createdBy String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  approved  Boolean  @default(true)
+
   DeedRewards    DeedRewards[]
   DeedsCompleted DeedsCompleted[]
 }
 
 model DeedRewards {
-  id        String   @id @unique
-  name      String
-  deedId    String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id             String   @id @unique
+  name           String
+  deedId         String
+  pointsRequired Int
+  createdBy      String   @default("admin")
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 
   deed Deeds @relation(fields: [deedId], references: [id])
 }
