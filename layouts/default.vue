@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="bg-[#ECE9E3]" h-screen overflow-y-hidden style="background-image: url(/bg.png);">
+  <div class="bg-[#ECE9E3]" bg-stretch h-screen overflow-y-hidden bg-cover bg-no-repeat style="background-image: url(/bg.png);">
     <slot />
   </div>
 </template>
