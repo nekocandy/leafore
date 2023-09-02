@@ -80,6 +80,16 @@ onMounted(() => {
               Educate yourself for the future generations to come, take your daily quiz!
             </div>
           </div>
+
+          <div class="bg-[#87728F]" rounded-md flex="~ col">
+            <div class="bg-[#493F4D]" rounded-t-md py-3 text-center text-white>
+              NGO Quick Links
+            </div>
+
+            <div flex flex-col gap-4 px-4 py-4 font-imprima>
+              ~ Link
+            </div>
+          </div>
         </div>
       </div>
     </div>
