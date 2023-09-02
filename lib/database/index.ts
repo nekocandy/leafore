@@ -1,14 +1,5 @@
-import { Pool } from 'pg'
-import { Kysely, PostgresDialect } from 'kysely'
+import { PrismaClient } from '@prisma/client'
 
-import type { DB } from './types'
+const prisma = new PrismaClient()
 
-const dialect = new PostgresDialect({
-  pool: new Pool({
-    connectionString: import.meta.env.DATABASE_URL,
-  }),
-})
-
-export const db = new Kysely<DB>({
-  dialect,
-})
+export { prisma }
