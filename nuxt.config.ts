@@ -19,6 +19,10 @@ export default defineNuxtConfig({
     },
   },
 
+  auth: {
+    enableGlobalAppMiddleware: true,
+  },
+
   modules: ['@vueuse/nuxt', '@unocss/nuxt', '@sidebase/nuxt-auth'],
   css: [
     '@unocss/reset/tailwind.css',
