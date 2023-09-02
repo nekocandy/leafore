@@ -14,19 +14,19 @@ export const userRouter = router({
     .query(async ({ ctx, input }) => {
       const email = input.email || ctx.user?.user?.email || ''
 
-      const userName = await prisma.user.findUnique({
+      const userData = await prisma.user.findUnique({
         where: {
           email,
         },
       })
 
-      if (!userName) {
+      if (!userData) {
         throw new TRPCError({
           code: 'NOT_FOUND',
           message: 'User not found',
         })
       }
 
-      return userName
+      return userData
     }),
 })

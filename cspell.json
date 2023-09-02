@@ -12,6 +12,7 @@
         "kysely",
         "Leafore",
         "notivue",
+        "numberpad",
         "nuxt",
         "sidebase",
         "trpc",
