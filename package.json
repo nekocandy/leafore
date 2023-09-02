@@ -1,13 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "build": "prisma generate && nuxt build",
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && husky install"
+    "postinstall": "nuxt prepare && husky install && prisma generate"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.41.0",
