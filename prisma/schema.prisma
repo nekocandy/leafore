@@ -6,6 +6,24 @@ generator kysely {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model Deeds {
+  id          String        @id
+  name        String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  DeedRewards DeedRewards[]
+}
+
+model DeedRewards {
+  id        String   @id
+  name      String
+  deedId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  deed Deeds @relation(fields: [deedId], references: [id])
 }
