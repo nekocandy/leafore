@@ -3,8 +3,13 @@
 </script>
 
 <template>
-  <div class="bg-[#ECE9E3]" bg-stretch h-screen overflow-y-hidden bg-cover bg-no-repeat style="background-image: url(/bg.png);">
-    <slot />
+  <div class="bg-[#ECE9E3]" flex="~ col" bg-stretch h-screen gap-4 overflow-y-hidden bg-cover bg-no-repeat px-4 py-4 style="background-image: url(/bg.png);">
+    <div>
+      <Navbar />
+    </div>
+    <div flex-1>
+      <slot />
+    </div>
   </div>
 </template>
 
