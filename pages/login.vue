@@ -1,6 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   auth: false,
+  layout: 'login',
 })
 
 const { signIn, status } = useAuth()
