@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import suppliesImage from '~/assets/dashboard/supplies.png'
+
 const time = ref('')
 
 function setTime() {
@@ -32,21 +34,34 @@ onMounted(() => {
             </div>
 
             <div grid grid-cols-3 gap-4 px-4 py-4 font-imprima>
-              <div class="bg-[#DA9393]" rounded-xl px-2 py-8 text-center>
+              <div class="bg-[#DA9393]" rounded-xl px-2 py-4 text-center>
                 Not Yet
               </div>
 
-              <div class="bg-[#B3A642]" rounded-xl px-2 py-8 text-center>
+              <div class="bg-[#B3A642]" rounded-xl px-2 py-4 text-center>
                 In Progress
               </div>
 
-              <div class="bg-[#95BF99]" rounded-xl px-2 py-8 text-center>
+              <div class="bg-[#95BF99]" rounded-xl px-2 py-4 text-center>
                 Done
               </div>
             </div>
 
             <div class="bg-[#989362]" rounded-b-md py-3 text-center text-white>
               {{ time }}
+            </div>
+          </div>
+
+          <div class="bg-[#94BAB2]" flex flex-1 flex-col gap-2 rounded-md px-4 py-4>
+            <div
+              flex-1 rounded-md bg-cover bg-center bg-no-repeat
+              :style="{
+                backgroundImage: `url(${suppliesImage})`,
+              }"
+            />
+
+            <div px-4 text-center text-sm font-imprima>
+              Discuss your ideas with your friends, share and get more views on best sustainability practices!
             </div>
           </div>
         </div>
