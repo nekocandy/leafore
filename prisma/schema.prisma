@@ -11,19 +11,31 @@ datasource db {
 }
 
 model Deeds {
-  id          String        @id
+  id          String        @id @unique
   name        String
+  points      Int
   createdAt   DateTime      @default(now())
   updatedAt   DateTime      @updatedAt
+  approved    Boolean       @default(true)
   DeedRewards DeedRewards[]
 }
 
 model DeedRewards {
-  id        String   @id
+  id        String   @id @unique
   name      String
   deedId    String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   deed Deeds @relation(fields: [deedId], references: [id])
+}
+
+model Forum {
+  id        String   @id @unique
+  title     String
+  username  String
+  avatar    String
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
