@@ -53,7 +53,7 @@ onMounted(() => {
             </div>
           </div>
 
-          <div class="bg-[#94BAB2]" flex flex-1 flex-col gap-2 rounded-md px-4 py-4>
+          <NuxtLink to="/forum" class="bg-[#94BAB2]" flex flex-1 flex-col gap-2 rounded-md px-4 py-4>
             <div
               flex-1 rounded-md bg-cover bg-center bg-no-repeat
               :style="{
@@ -64,11 +64,11 @@ onMounted(() => {
             <div px-4 text-center text-sm font-imprima>
               Discuss your ideas with your friends, share and get more views on best sustainability practices!
             </div>
-          </div>
+          </NuxtLink>
         </div>
 
         <div h-full w-full flex flex-col gap-4>
-          <div flex flex-1 flex-col gap-2 rounded-md bg-white px-4 py-4>
+          <NuxtLink to="/crossword" flex flex-1 flex-col gap-2 rounded-md bg-white px-4 py-4>
             <div
               flex-1 rounded-md bg-cover bg-center bg-no-repeat
               :style="{
@@ -79,7 +79,7 @@ onMounted(() => {
             <div px-4 text-center text-sm font-imprima class="text-[#545F71]">
               Educate yourself for the future generations to come, take your daily quiz!
             </div>
-          </div>
+          </NuxtLink>
 
           <div class="bg-[#87728F]" rounded-md flex="~ col">
             <div class="bg-[#493F4D]" rounded-t-md py-3 text-center text-white>
