@@ -83,11 +83,14 @@ onMounted(() => {
 
           <div class="bg-[#87728F]" rounded-md flex="~ col">
             <div class="bg-[#493F4D]" rounded-t-md py-3 text-center text-white>
-              NGO Quick Links
+              Important Days
             </div>
 
-            <div flex flex-col gap-4 px-4 py-4 font-imprima>
-              ~ Link
+            <div flex flex-col gap-1 px-4 py-4 font-imprima>
+              <div>  ~ 16th September WORLD OZONE DAY </div>
+              <div>  ~ 19th September WORLD CLEAN UP DAY </div>
+              <div>  ~ 28th September GREEN CONSUMER DAY </div>
+              <div>  ~ 3rd October WORLD HABITAT DAY </div>
             </div>
           </div>
         </div>
