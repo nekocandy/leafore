@@ -23,6 +23,10 @@ const PAGES: Pages[] = [
     location: '/recreation',
   },
   {
+    name: 'Crossword',
+    location: '/crossword',
+  },
+  {
     name: 'NGO',
     location: '/ngo',
   },
