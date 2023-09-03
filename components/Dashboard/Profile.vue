@@ -32,7 +32,7 @@ const userData = await $client.user.getUser.query({})
       <div flex items-center text-xs font-imprima>
         <span>Total deeds completed</span>
         <div ml-auto rounded bg-white px-2 py-1>
-          {{ numberpad(userData.points, 2) }}
+          {{ numberpad(userData.DeedsCompleted.length, 2) }}
         </div>
       </div>
 
@@ -41,7 +41,7 @@ const userData = await $client.user.getUser.query({})
       <div flex items-center text-xs font-imprima>
         <span>Total rewards earned</span>
         <div ml-auto rounded bg-white px-2 py-1>
-          {{ numberpad(userData.points, 2) }}
+          {{ numberpad(userData.DeedRewardsClaimed.length, 2) }}
         </div>
       </div>
 
