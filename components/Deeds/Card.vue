@@ -1,5 +1,7 @@
 <script setup lang="ts">
-defineProps({
+import { usePush } from 'notivue'
+
+const props = defineProps({
   image: {
     type: String,
     required: true,
@@ -17,6 +19,23 @@ defineProps({
     required: true,
   },
 })
+
+const { $client } = useNuxtApp()
+const push = usePush()
+
+const mutation = $client.deeds.completeDeed
+
+async function completeDeed() {
+  const promise = push.promise('Marking deed as complete...')
+  await mutation.mutate({
+    id: props.id,
+    points: props.pointsRequired,
+  })
+
+  promise.resolve(
+    'Deed marked as complete! Points have been credited.',
+  )
+}
 </script>
 
 <template>
