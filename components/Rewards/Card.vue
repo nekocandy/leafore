@@ -36,9 +36,17 @@ const { $client } = useNuxtApp()
 const push = usePush()
 
 const mutation = $client.rewards.redeemReward
+const userInfoQuery = $client.user.getUser
 
 async function completeDeed() {
   const promise = push.promise('Redeeming reward...')
+  const userInfo = await userInfoQuery.query({})
+
+  if (userInfo.points < props.pointsRequired) {
+    promise.reject('You do not have enough points to redeem this reward')
+    return
+  }
+
   await mutation.mutate({
     id: props.id,
     points: props.pointsRequired,
