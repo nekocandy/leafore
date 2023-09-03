@@ -18,10 +18,16 @@ const props = defineProps({
     type: Number,
     required: true,
   },
+  completed: {
+    type: Boolean,
+    required: true,
+  },
 })
 
 const { $client } = useNuxtApp()
 const push = usePush()
+
+const completed = ref(props.completed)
 
 const mutation = $client.deeds.completeDeed
 
@@ -31,6 +37,8 @@ async function completeDeed() {
     id: props.id,
     points: props.pointsRequired,
   })
+
+  completed.value = true
 
   promise.resolve(
     'Deed marked as complete! Points have been credited.',
@@ -52,12 +60,16 @@ async function completeDeed() {
         {{ numberpad(pointsRequired, 2) }} Points
       </p>
 
-      <h1 font-imprima class="text-md text-[#425551]">
+      <h1
+        font-imprima class="text-md text-[#425551]" :class="{
+          'line-through': completed,
+        }"
+      >
         {{ title }}
       </h1>
     </div>
 
-    <button class="bg-[#94BAB2]" justify-self-end rounded-md py-2 font-imprima text-white>
+    <button :disabled="completed" class="bg-[#94BAB2] disabled:cursor-not-allowed" justify-self-end rounded-md py-2 font-imprima text-white @click="completeDeed">
       Do the deedful
     </button>
   </div>

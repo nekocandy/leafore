@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { $client } = useNuxtApp()
+const userInfo = await $client.user.getUser.query({})
 const deeds = await $client.deeds.getDeeds.query()
 </script>
 
@@ -19,6 +20,7 @@ const deeds = await $client.deeds.getDeeds.query()
         :image="deed.image"
         :title="deed.name"
         :points-required="deed.points"
+        :completed="userInfo.DeedsCompleted.filter((d) => d.deedId === deed.id).length > 0"
       />
     </div>
   </div>
