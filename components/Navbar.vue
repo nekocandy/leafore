@@ -19,6 +19,10 @@ const PAGES: Pages[] = [
     location: '/forum',
   },
   {
+    name: 'Tree',
+    location: '/tree',
+  },
+  {
     name: 'Recreation',
     location: '/recreation',
   },
@@ -31,8 +35,8 @@ const PAGES: Pages[] = [
     location: '/ngo',
   },
   {
-    name: 'Tree',
-    location: '/tree',
+    name: 'News',
+    location: '/news',
   },
 ]
 </script>
