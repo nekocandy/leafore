@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import suppliesImage from '~/assets/dashboard/supplies.png'
-import pencilImage from '~/assets/dashboard/pencil.png'
+import pencilImage from '~/assets/dashboard/pencil-1.webp'
 
 const time = ref('')
 
