@@ -3,17 +3,17 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-      title: 'opinionated nuxt',
+      title: 'Leafore',
       meta: [
         {
           name: 'description',
-          content: 'an opinionated nuxt starter template',
+          content: 'A platform to sustain ♻️, educate 🧠 and enable eco-friendly 🌱 best practices!',
         },
       ],
       link: [
         {
           rel: 'icon',
-          href: '/oink.svg',
+          href: '/favicon.png',
         },
       ],
     },
