@@ -8,7 +8,7 @@ export const deedsRouter = router({
     .query(async ({ ctx }) => {
       return [
         {
-          id: 1,
+          id: '1',
           image: 'https://picsum.photos/200',
           title: 'Deed 1',
           pointsRequired: 10,
