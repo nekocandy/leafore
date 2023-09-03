@@ -101,10 +101,33 @@ const rewardsData = [
   },
 ]
 
+const forumPosts = [
+  {
+    id: nanoid(),
+    title: 'How to reduce plastic waste?',
+    content: '',
+    userId: 'clm2ftjb20000nhkg5yobmqbp',
+  },
+
+  {
+    id: nanoid(),
+    title: 'Design Leadership: How To Build a Design that is Sustainable?',
+    content: '',
+    userId: 'clm2otf1i0000l508yac5alyh',
+  },
+
+  {
+    id: nanoid(),
+    title: 'How do we make sustainable technologies more accessible to engineers, makers and the wider public?',
+    content: '',
+    userId: 'clm31ialq0002mh08uebj4vxh',
+  },
+]
+
 export function seed() {
-  return prisma.deedRewards.createMany({
-    data: rewardsData,
+  return prisma.forum.createMany({
+    data: forumPosts,
   })
 }
 
-// await seed()
+await seed()
