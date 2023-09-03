@@ -1,13 +1,13 @@
 <script setup lang="ts">
 definePageMeta({
-  auth: false,
+  auth: {
+    unauthenticatedOnly: true,
+    navigateAuthenticatedTo: 'dashboard',
+  },
   layout: 'login',
 })
 
 const { signIn, status } = useAuth()
-
-if (status.value === 'authenticated')
-  navigateTo('/dashboard')
 
 watch(status, (value) => {
   if (value === 'authenticated')
