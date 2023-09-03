@@ -38,6 +38,10 @@ const PAGES: Pages[] = [
     name: 'News',
     location: '/news',
   },
+  {
+    name: 'Chatbot',
+    location: '/chatbot',
+  },
 ]
 </script>
 
