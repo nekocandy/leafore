@@ -20,6 +20,7 @@ export const userRouter = router({
         },
         include: {
           DeedsCompleted: true,
+          DeedRewardsClaimed: true,
         },
       })
 
