@@ -1,5 +1,36 @@
 <script setup lang="ts">
 const { signOut } = useAuth()
+
+interface Pages {
+  name: string
+  location: string
+}
+const PAGES: Pages[] = [
+  {
+    name: 'Deeds',
+    location: '/deeds',
+  },
+  {
+    name: 'Rewards',
+    location: '/rewards',
+  },
+  {
+    name: 'Forum',
+    location: '/forum',
+  },
+  {
+    name: 'Recreation',
+    location: '/recreation',
+  },
+  {
+    name: 'NGO',
+    location: '/ngo',
+  },
+  {
+    name: 'Tree',
+    location: '/tree',
+  },
+]
 </script>
 
 <template>
@@ -9,8 +40,14 @@ const { signOut } = useAuth()
       Leafore
     </NuxtLink>
 
-    <div flex-1 rounded-md class="bg-[#BFCDC0]" px-12 py-2>
-      .
+    <div class="bg-[#BFCDC0]" flex flex-1 items-center justify-evenly rounded-md px-4 py-2>
+      <NuxtLink
+        v-for="page in PAGES" :key="page.location" class="text-[#6B8E6E]" :class="{
+          'text-white bg-[#90AD92] rounded-full px-4 py-1': page.location.startsWith($route.path),
+        }" :to="page.location"
+      >
+        {{ page.name }}
+      </NuxtLink>
     </div>
 
     <button class="bg-[#D0BCBC]" rounded-md px-6 py-2 text-sm @click="signOut()">
