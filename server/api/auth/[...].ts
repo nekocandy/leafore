@@ -6,6 +6,9 @@ import { prisma } from '~/lib/database'
 export default NuxtAuthHandler({
   secret: useRuntimeConfig().auth.SECRET,
   adapter: PrismaAdapter(prisma),
+  pages: {
+    signIn: '/login',
+  },
   providers: [
     // @ts-expect-error vite SSR issue - need to use .default
     DiscordProvider.default({
