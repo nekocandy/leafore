@@ -45,8 +45,66 @@ const data = [
   },
 ]
 
+const rewardsData = [
+  {
+    id: nanoid(),
+    name: 'Eco Pens',
+    image: 'https://cdn.discordapp.com/attachments/1147080857492918314/1147788431620059226/Frame_56.png',
+    pointsRequired: 10,
+    semiDescription: 'Pens made with recycled cardboard and paper',
+    description: 'Eco pens made with recycled paper waste and cardboard.',
+  },
+
+  {
+    id: nanoid(),
+    name: 'Eco Notebook',
+    image: 'https://cdn.discordapp.com/attachments/1147080857492918314/1147788430936379472/Frame_54.png',
+    pointsRequired: 10,
+    semiDescription: 'Pens made with recycled cardboard and paper',
+    description: 'Eco pens made with recycled paper waste and cardboard.',
+  },
+
+  {
+    id: nanoid(),
+    name: 'Eco Sticky Notes',
+    image: 'https://cdn.discordapp.com/attachments/1147080857492918314/1147788431246770236/Frame_55.png',
+    pointsRequired: 10,
+    semiDescription: 'Notes made with recycled cardboard and paper',
+    description: 'Notes made with recycled paper waste and cardboard.',
+  },
+
+  {
+    id: nanoid(),
+    name: 'Eco Pens',
+    image: 'https://cdn.discordapp.com/attachments/1147080857492918314/1147788431620059226/Frame_56.png',
+    pointsRequired: 10,
+    semiDescription: 'Pens made with recycled cardboard and paper',
+    description: 'Eco pens made with recycled paper waste and cardboard.',
+  },
+
+  {
+    id: nanoid(),
+    name: 'Eco Pens',
+    image: 'https://cdn.discordapp.com/attachments/1147080857492918314/1147788431620059226/Frame_56.png',
+    pointsRequired: 10,
+    semiDescription: 'Pens made with recycled cardboard and paper',
+    description: 'Eco pens made with recycled paper waste and cardboard.',
+  },
+
+  {
+    id: nanoid(),
+    name: 'Eco Pens',
+    image: 'https://cdn.discordapp.com/attachments/1147080857492918314/1147788431620059226/Frame_56.png',
+    pointsRequired: 10,
+    semiDescription: 'Pens made with recycled cardboard and paper',
+    description: 'Eco pens made with recycled paper waste and cardboard.',
+  },
+]
+
 export function seed() {
-  return prisma.deeds.createMany({
-    data,
+  return prisma.deedRewards.createMany({
+    data: rewardsData,
   })
 }
+
+// await seed()
