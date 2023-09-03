@@ -70,12 +70,15 @@ model Deeds {
 }
 
 model DeedRewards {
-  id             String   @id @unique
-  name           String
-  pointsRequired Int
-  createdBy      String   @default("admin")
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  id              String   @id @unique
+  name            String
+  image           String
+  semiDescription String
+  description     String
+  pointsRequired  Int
+  createdBy       String   @default("admin")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 
   DeedRewardsClaimed DeedRewardsClaimed[]
 }
