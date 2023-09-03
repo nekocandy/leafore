@@ -4,10 +4,10 @@ const { signOut } = useAuth()
 
 <template>
   <div flex items-center gap-4>
-    <div class="bg-[#D0BCBC] text-[#432C2C]" flex items-center gap-1 rounded-md px-6 py-2 font-imprima>
+    <NuxtLink to="/dashboard" class="bg-[#D0BCBC] text-[#432C2C]" flex items-center gap-1 rounded-md px-6 py-2 font-imprima>
       <div class="text-[#432C2C]" i-tabler-plant-2 />
       Leafore
-    </div>
+    </NuxtLink>
 
     <div flex-1 rounded-md class="bg-[#BFCDC0]" px-12 py-2>
       .
