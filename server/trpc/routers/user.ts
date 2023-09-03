@@ -18,6 +18,9 @@ export const userRouter = router({
         where: {
           email,
         },
+        include: {
+          DeedsCompleted: true,
+        },
       })
 
       if (!userData) {
